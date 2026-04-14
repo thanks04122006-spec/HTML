@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 선택자 예제</title>
+    <style>
+        /* ul{
+            overflow: hidden;
+        }
+        li{
+            list-style: none;
+            float: left;
+            width: 100px;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+        }
+        li:first-child{
+            border-radius: 10px 0 0 10px;
+        }
+        li:last-child{
+            border-radius: 0 10px 10px 0;
+        }
+        li:nth-child(2n){
+            background-color: rgb(156, 148, 148);
+        }
+        li:nth-child(2n+1){
+            background-color: #38c7bb;
+        } */
+
+        li:first-child > a{
+            color: magenta;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#"> 항목 1</a></li>
+        <li><a href="#"> 항목 2</a> </li>
+        <li><a href="#"> 항목 3</a></li>
+        <li><a href="#"> 항목 4</a></li>
+        <li><a href="#"> 항목 5</a></li>
+        <li><a href="#"> 항목 6</a></li>
+        <li><a href="#"> 항목 7</a></li>
+    </ul>
+</body>
+</html>
