@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소객체 속성 조작하기</title>
+    <script>
+        window.onload = function(){
+            let img1 = document.getElementById("img1");
+
+            // img1.src = "https://placehold.co/300x200";
+            img1.src = "../img/dog.avif";
+            // img1.src = "../img/hug.jpg";
+            img1.width = 300;
+            img1.height = 200;
+        }
+
+        function changeImage(btn){
+            let img1 = document.getElementById("img1");
+            // img1.src = "../img/hug.jpg";
+            // img1.width = 300;
+            // img1.height = 200;
+
+            let btn1 = document.getElementById("btn1");
+            if (btn1.innerHTML === "가나디 이미지 변경") {
+                img1.src = "../img/hug.jpg";
+                btn1.innerHTML = "강아지 이미지 변경";
+            } 
+            else {
+                btn1.innerHTML = "가나디 이미지 변경";
+                img1.src = "../img/dog.avif";
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <button onclick="changeImage(this)" id="btn1">가나디 이미지 변경</button>
+    <br><br>
+    <img id="img1">
+</body>
+</html>
