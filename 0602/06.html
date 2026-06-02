@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        callAlert = function(msg) {
+            alert(msg);
+        }
+    </script>
+</head>
+<body>
+    <!-- <button onclick="alert('hello, world')">Click me!</button> -->
+     <input type = "text" id = "input_text" size = "15" placeholder = "메시지를 입력하세요">
+    <button onclick="callAlert(document.getElementById('input_text').value)">Click me!</button>
+
+</body>
+</html>
