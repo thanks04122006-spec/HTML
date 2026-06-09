@@ -12,11 +12,47 @@
         function addstar(btn) {
             btn.textContent += '★';
         }
+
+        function changeColor(btn) {
+            btn.style.backgroundColor = 'darkgray';
+            butn.style.color = 'white';
+        }
+
+        function outColor(btn) {
+            btn.style.backgroundColor = 'lightgray';
+            btn.style.color = 'black';
+        }
+
+        let count = 0;
+        imgs = ['imgs/꼬옥담곰.png', 'imgs/담곰1.jpg', 'imgs/수박담곰.jpg', 'imgs/유령담곰.png', 'imgs/찹쌀담곰.jpg'];
+        function changeImg() {
+            count++;
+            if(count == 6){
+                count = 1;
+            }
+            let img = document.querySelector('img');
+            img.src = imgs[count - 1];
+        }
+
+        function changeImg2() {
+            let img = document.getElementById('img2');
+            setInterval(function() {
+                count++;
+                if(count == 6){
+                    count = 1;
+                }
+                img.src = imgs[count - 1];
+            }, 2000);
+        }
     </script>
 </head>
-<body>
+<body onload="changeImg2()">
     <button onclick="alert('인라인 이벤트 모델 1')">인라인 이벤트 모델 1</button><br><br>
     <button onclick="greet()">인라인 이벤트 모델 2</button><br><br>
     <button onclick="addstar(this)">별 추가</button>
+    <button onmouseover="changeColor(this)" onmouseout="outColor(this)">배경 및 글자색 변경</button>
+    <br><br>
+    <img src="imgs/꼬옥담곰.png" width = "400" height = "300" onclick = "changeImg()"><br><br>
+    <img src = "imgs/꼬옥담곰.png" width = "400" height = "300" id = "img2" onclick = "changeImg2()">
 </body>
 </html>
