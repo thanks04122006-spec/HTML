@@ -34,7 +34,7 @@
             img.src = imgs[count - 1];
         }
 
-        function changeImg2() {
+        function showImageSlide() {
             let img = document.getElementById('img2');
             setInterval(function() {
                 count++;
@@ -43,16 +43,24 @@
                 }
                 img.src = imgs[count - 1];
             }, 2000);
+
+            let a1 = document.getElementById('a1');
+            a1.onclick = function(event) {
+                // event.preventDefault(); // 디폴트 이벤트 제거
+                return false; // 디폴트 이벤트 제거
+            }
         }
+
     </script>
 </head>
-<body onload="changeImg2()">
+<body onload="showImageSlide()">
     <button onclick="alert('인라인 이벤트 모델 1')">인라인 이벤트 모델 1</button><br><br>
     <button onclick="greet()">인라인 이벤트 모델 2</button><br><br>
     <button onclick="addstar(this)">별 추가</button>
     <button onmouseover="changeColor(this)" onmouseout="outColor(this)">배경 및 글자색 변경</button>
     <br><br>
     <img src="imgs/꼬옥담곰.png" width = "400" height = "300" onclick = "changeImg()"><br><br>
-    <img src = "imgs/꼬옥담곰.png" width = "400" height = "300" id = "img2" onclick = "changeImg2()">
+    <img src = "imgs/꼬옥담곰.png" width = "400" height = "300" id = "img2" onclick = "showImageSlide()">
+    <a href="https://www.google.com/?hl=ko" id="a1">디폴트 이벤트 제거</a>
 </body>
 </html>
