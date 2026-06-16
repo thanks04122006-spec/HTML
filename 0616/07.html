@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- jQuery library 설정 -->
+    <script src = "https://code.jquery.com/jquery-4.0.0.js"></script>
+    <!-- jQuery 문법으로 작성 -->
+     <script>
+        $(document).ready(
+            function(){
+                $("body").css("background", "black");
+
+                $("#box").css({
+                    width : "100px",
+                    height : "100px",
+                    background : "orange",
+                    position : "absolute",
+                    left : "10px",
+                    top : "10px"
+                }
+                ).animate({
+                    opacity: 0.2,
+                    width : "300px"
+                    }, 1000
+                ).animate({
+                    opacity: 1.0,
+                    left : "10px",
+                    top : "10px"
+                    }, 1000);
+            }
+        );
+     </script>
+</head>
+<body>
+    <div id = "box"></div>
+</body>
+</html>
