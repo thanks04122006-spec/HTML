@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- jQuery library 설정 -->
+    <script src = "https://code.jquery.com/jquery-4.0.0.js"></script>
+    <!-- jQuery 문법으로 작성 -->
+     <script>
+        $(document).ready(
+            function(){
+                $("h1").click(
+                    function(){
+                        $(this).css({
+                            background : "red",
+                            color : "white",
+                            width : "200px",
+                            height : "50px"
+                        });
+                    }
+                );
+                $("h1").mouseout(
+                    function(){
+                        $(this).css({
+                            background : "",
+                            color : "",
+                        });
+                    }
+                );
+            }
+        );
+     </script>
+</head>
+<body>
+    <h1>Click Here!</h1>
+</body>
+</html>
