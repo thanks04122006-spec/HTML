@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 5, 5);
+        }
+
+        #box.hover{
+            background-color: blue;
+            border-radius: 50px;
+        }
+    </style>
+        <!-- jQuery library 설정 -->
+    <script src = "https://code.jquery.com/jquery-4.0.0.js"></script>
+    <!-- jQuery 문법으로 작성 -->
+     <script>
+        $(document).ready(
+            function(){
+                $("#box").hover(
+                    function(){
+                        $(this).addClass("hover");
+                    },
+                    function(){
+                        $(this).removeClass("hover");
+                    }
+                );
+            }
+        );
+     </script>
+</head>
+<body>
+    <div id = "box"></div>
+</body>
+</html>
