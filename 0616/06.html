@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+            <!-- jQuery library 설정 -->
+    <script src = "https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("#btn_fadetoggle").click(
+                    function(){
+                        $(".page").fadeToggle(500);
+                    }
+                );
+                $("#btn_toggle").click(
+                    function(){
+                        $(".page").toggle();
+                    }
+                );
+                $("#btn_slidetoggle").click(
+                    function(){
+                        $(".page").slideToggle("slow");
+                    }
+                );
+
+            }
+        )
+    </script>
+</head>
+<body>
+    <button id = "btn_fadetoggle">show fade toggle</button>&nbsp;
+    <button id = "btn_toggle">show toggle</button>&nbsp;
+    <button id = "btn_slidetoggle">show slide toggle</button>&nbsp;
+
+    <div class="page">
+        <h1>jQery Fade Toggle</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, nihil libero modi quidem quia corrupti nisi rem excepturi est quaerat hic doloribus perspiciatis sed! Totam enim aperiam minima rem fuga.
+        </p>
+    </div>
+</body>
+</html>
